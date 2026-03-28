@@ -5,24 +5,24 @@ const T = {
     nav: { portfolio: "Portfolio", about: "Chi Sono", services: "Servizi", contact: "Contatti" },
     categories: {
       landscape: { name: "Paesaggi & Natura", desc: "La bellezza dei paesaggi italiani e della natura selvaggia" },
-      wedding: { name: "Matrimoni & Eventi", desc: "Momenti irripetibili del vostro giorno più bello" },
-      portrait: { name: "Ritratti & Moda", desc: "L'essenza delle persone catturata in uno scatto" },
-      street: { name: "Street & Documentario", desc: "Storie di vita quotidiana e cultura urbana" },
+      ceremony: { name: "Cerimonie & Eventi", desc: "Momenti irripetibili delle vostre occasioni più importanti" },
+      portrait: { name: "Ritratti", desc: "L'essenza delle persone catturata in uno scatto" },
+      boudoir: { name: "Fotografia Boudoir", desc: "Eleganza, intimità e bellezza in scatti raffinati e discreti" },
     },
     about: {
       title: "Chi Sono",
       p1: "Sono Sabrina Maltempi, fotografa italiana con una passione profonda per la luce naturale e i dettagli che raccontano storie.",
       p2: "Come ottico di professione, ho sviluppato una sensibilità unica per la visione: capire come l'occhio percepisce il mondo mi ha insegnato a catturarlo attraverso l'obiettivo in modo autentico e coinvolgente.",
-      p3: "Che si tratti di un paesaggio all'alba, di un momento spontaneo per strada o di un ritratto intimo, il mio obiettivo è sempre lo stesso: trasformare l'ordinario in qualcosa di straordinario.",
+      p3: "Che si tratti di un paesaggio all'alba, di una sessione boudoir intima o di un ritratto emozionante, il mio obiettivo è sempre lo stesso: trasformare l'ordinario in qualcosa di straordinario.",
       badge: "Ottico & Fotografa",
     },
     services: {
       title: "Servizi", subtitle: "Ogni servizio è personalizzato sulle tue esigenze",
       items: [
-        { name: "Matrimoni & Eventi", desc: "Racconto la vostra giornata speciale con sensibilità e attenzione ad ogni dettaglio." },
-        { name: "Ritratti & Moda", desc: "Sessioni in studio o in location per ritratti personali e book professionali." },
+        { name: "Cerimonie & Eventi", desc: "Racconto le vostre occasioni speciali con sensibilità e attenzione ad ogni dettaglio." },
+        { name: "Ritratti", desc: "Sessioni in studio o in location per ritratti personali e book professionali." },
         { name: "Paesaggi & Natura", desc: "Stampe fine art di paesaggi italiani, perfette per arredare i vostri spazi." },
-        { name: "Street & Documentario", desc: "Progetti fotografici che raccontano storie e la bellezza della vita quotidiana." },
+        { name: "Fotografia Boudoir", desc: "Servizi fotografici intimi e raffinati che esaltano la bellezza naturale con eleganza." },
       ],
       cta: "Richiedi un Preventivo",
     },
@@ -38,24 +38,24 @@ const T = {
     nav: { portfolio: "Portfolio", about: "About", services: "Services", contact: "Contact" },
     categories: {
       landscape: { name: "Landscapes & Nature", desc: "The beauty of Italian landscapes and wild nature" },
-      wedding: { name: "Weddings & Events", desc: "Unrepeatable moments of your most beautiful day" },
-      portrait: { name: "Portraits & Fashion", desc: "The essence of people captured in a shot" },
-      street: { name: "Street & Documentary", desc: "Stories of everyday life and urban culture" },
+      ceremony: { name: "Ceremonies & Events", desc: "Unrepeatable moments of your most important occasions" },
+      portrait: { name: "Portraits", desc: "The essence of people captured in a shot" },
+      boudoir: { name: "Boudoir Photography", desc: "Elegance, intimacy and beauty in refined and discreet shots" },
     },
     about: {
       title: "About Me",
       p1: "I'm Sabrina Maltempi, an Italian photographer with a deep passion for natural light and the details that tell stories.",
       p2: "As an optician by profession, I've developed a unique sensitivity for vision: understanding how the eye perceives the world has taught me to capture it through the lens in an authentic and engaging way.",
-      p3: "Whether it's a landscape at dawn, a spontaneous street moment, or an intimate portrait, my goal is always the same: transforming the ordinary into something extraordinary.",
+      p3: "Whether it's a landscape at dawn, an intimate boudoir session, or a heartfelt portrait, my goal is always the same: transforming the ordinary into something extraordinary.",
       badge: "Optician & Photographer",
     },
     services: {
       title: "Services", subtitle: "Every service is tailored to your needs",
       items: [
-        { name: "Weddings & Events", desc: "I tell the story of your special day with sensitivity and attention to every detail." },
-        { name: "Portraits & Fashion", desc: "Photo sessions in studio or on location for personal portraits and professional books." },
+        { name: "Ceremonies & Events", desc: "I tell the story of your special occasions with sensitivity and attention to every detail." },
+        { name: "Portraits", desc: "Photo sessions in studio or on location for personal portraits and professional books." },
         { name: "Landscapes & Nature", desc: "Fine art prints of Italian landscapes, perfect for decorating your spaces." },
-        { name: "Street & Documentary", desc: "Photographic projects that tell stories and the hidden beauty of everyday life." },
+        { name: "Boudoir Photography", desc: "Intimate and refined photo sessions that enhance natural beauty with elegance." },
       ],
       cta: "Request a Quote",
     },
@@ -83,7 +83,7 @@ const IMAGES = {
       "https://images.unsplash.com/photo-1465056836900-8f1e940f1904?w=1000&q=80",
     ],
   },
-  wedding: {
+  ceremony: {
     cover: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&q=80",
@@ -105,7 +105,7 @@ const IMAGES = {
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1000&q=80",
     ],
   },
-  street: {
+  boudoir: {
     cover: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1000&q=80",
@@ -292,7 +292,7 @@ export default function SabrinaMaltempi() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const catKeys = ["landscape", "wedding", "portrait", "street"];
+  const catKeys = ["landscape", "ceremony", "portrait", "boudoir"];
   const isGallery = page.startsWith("gallery:");
   const galleryCat = isGallery ? page.split(":")[1] : null;
 
