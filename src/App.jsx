@@ -113,7 +113,7 @@ export default function SabrinaMaltempi() {
         <div className="sm3-sb">
           <div className="sm3-sl">
             <a href="https://www.instagram.com/sabry_emme" target="_blank" rel="noopener noreferrer"><IgIcon/></a>
-            <a href="https://facebook.com/sabrinamaltempi" target="_blank" rel="noopener noreferrer"><FbIcon/></a>
+            <a href="https://www.facebook.com/sabrina.emme.3" target="_blank" rel="noopener noreferrer"><FbIcon/></a>
           </div>
           <div className="sm3-btns">
             <button className="sm3-lb" onClick={() => setLang(l => l === "it" ? "en" : "it")}>{lang === "it" ? "EN" : "IT"}</button>
